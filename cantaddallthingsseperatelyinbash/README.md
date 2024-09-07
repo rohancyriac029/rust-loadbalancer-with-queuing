@@ -33,28 +33,3 @@ For a production-ready build, you can use:
 cargo build --release
 ```
 
-## How to Use
-### The Application
-After building, the main executable will be located in `/target/debug` or `/target/release` based on the build command used.
-Navigate to the directory and type
-```sh
-Balrs help
-```
-in the terminal to get a list of available commands.
-
-Alternatively, from the root directory of Bal.rs, you can use:
-```sh
-cargo run help
-```
-for the same result.
-
-### The Config file
-The `config.yaml` file allows you to customize the Load Balancer settings:
-
-- Load Balancer address: The URL of the Load Balancer(Default: http://localhost:8000)
-- Algorithm: The load balancing algorithm to be used by Balrs(Default: round robin)
-- Servers: List of server URLs to which Balrs can send requests
-- Weights: List of weights of respective servers, used by weighted load balancing algorithms
-- Max connections: List of the maximum number of connections each server is allowed to handle
-- Timeout: Maximum time allowed for a server to respond before it is marked as dead
-- Health check interval: Time interval at which server health checks are performed
